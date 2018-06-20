@@ -34,7 +34,7 @@ public class Paddle : MonoBehaviour {
         float mousePos = (Input.mousePosition.x / Screen.width) * 16;
         //print("x = " + mousePos);
         Vector3 paddlePos = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
-        paddlePos.x = Mathf.Clamp(mousePos, 0.5f, 15.5f);
+        paddlePos.x = Mathf.Clamp(mousePos, 0.65f, 15.35f);
         this.transform.position = paddlePos;
     }
 
@@ -43,7 +43,7 @@ public class Paddle : MonoBehaviour {
         Vector3 ballPos = ball.transform.position;
         //print("x = " + mousePos);
         Vector3 paddlePos = new Vector3(0.5f, this.transform.position.y, 0f);
-        paddlePos.x = Mathf.Clamp(ballPos.x, 0.5f, 15.5f);
+        paddlePos.x = Mathf.Clamp(ballPos.x, 0.65f, 15.35f);
         this.transform.position = paddlePos;
     }
 }
